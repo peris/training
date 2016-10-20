@@ -36,4 +36,12 @@ public class BibTest {
         assertNotNull(bibHoldings);
     }
 
+    @Test
+    public void content() throws Exception {
+        Bib bib = new Bib();
+        bib.setContent("bib content");
+        String bibContent = bib.getContent();
+        assertNotNull(bibContent);
+    }
+
 }
