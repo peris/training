@@ -1,13 +1,10 @@
 package com.htcinc.entity;
 
-import java.util.List;
-
 /**
- * Created by peris on 10/19/16.
+ * Created by akulak on 20/10/16.
  */
-public class Holdings {
-    public Integer id;
-    private List<Item> item;
+public class Item {
+    private Integer id;
     private String content;
 
     public void setId(int id) {
@@ -16,14 +13,6 @@ public class Holdings {
 
     public Integer getId() {
         return id;
-    }
-
-    public void setItem(List<Item> item) {
-        this.item = item;
-    }
-
-    public List<Item> getItem() {
-        return item;
     }
 
     public void setContent(String content) {
