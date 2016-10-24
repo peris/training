@@ -17,13 +17,24 @@ public class TrainingApplicationTests {
 
 
 	//	2.
+	@Test
+	public void createPojoClassesForMarcXml(){
+
+	}
 
 
 	//	3.
+	@Test
+	public void createUnMarshallerClass(){
 
+	}
 
 
 	//	4.
+	@Test
+	public void readMarcXmlContent(){
+
+	}
 
 
 
