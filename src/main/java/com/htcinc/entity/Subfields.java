@@ -1,6 +1,7 @@
 package com.htcinc.entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlValue;
 
 /**
  * Created by harikrishnanv on 25/10/16.
@@ -24,6 +25,7 @@ public class Subfields {
         this.desc = desc;
     }
 
+    @XmlValue
     public String getDesc() {
         return desc;
     }
