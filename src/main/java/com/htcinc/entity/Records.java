@@ -7,19 +7,16 @@ import java.util.List;
  * Created by harikrishnanv on 24/10/16.
  */
 public class Records {
-    @XmlElement
+
     private String leader;
-
-    @XmlElement
     private List<Controlfield> controlfields;
-
-    @XmlElement
     private List<Datafield> datafields;
 
     public void setLeader(String leader) {
         this.leader = leader;
     }
 
+    @XmlElement
     public String getLeader() {
         return leader;
     }
@@ -28,6 +25,7 @@ public class Records {
         this.controlfields = controlfields;
     }
 
+    @XmlElement
     public List<Controlfield> getControlfields() {
         return controlfields;
     }
@@ -36,6 +34,7 @@ public class Records {
         this.datafields = datafields;
     }
 
+    @XmlElement
     public List<Datafield> getDatafields() {
         return datafields;
     }

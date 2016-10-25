@@ -7,13 +7,14 @@ import javax.xml.bind.annotation.XmlAttribute;
  */
 
 public class Controlfield {
-    @XmlAttribute
+
     private int tag;
 
     public void setTag(int tag) {
         this.tag = tag;
     }
 
+    @XmlAttribute
     public int getTag() {
         return tag;
     }

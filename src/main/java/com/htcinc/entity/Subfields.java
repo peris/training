@@ -7,13 +7,14 @@ import javax.xml.bind.annotation.XmlAttribute;
  */
 public class Subfields {
 
-    @XmlAttribute
+
     private char code;
 
     public void setCode(char code) {
         this.code = code;
     }
 
+    @XmlAttribute
     public char getCode() {
         return code;
     }

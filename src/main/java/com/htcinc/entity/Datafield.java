@@ -8,22 +8,23 @@ import java.util.List;
  * Created by harikrishnanv on 25/10/16.
  */
 public class Datafield {
-    @XmlAttribute
+
     private int tag;
 
-    @XmlAttribute
+
     private int ind1;
 
-    @XmlAttribute
+
     private int ind2;
 
-    @XmlElement
+
     private List<Subfields> subfield;
 
     public void setTag(int tag) {
         this.tag = tag;
     }
 
+    @XmlAttribute
     public int getTag() {
         return tag;
     }
@@ -32,6 +33,7 @@ public class Datafield {
         this.ind1 = ind1;
     }
 
+    @XmlAttribute
     public int getInd1() {
         return ind1;
     }
@@ -40,6 +42,7 @@ public class Datafield {
         this.ind2 = ind2;
     }
 
+    @XmlAttribute
     public int getInd2() {
         return ind2;
     }
@@ -48,6 +51,7 @@ public class Datafield {
         this.subfield = subfield;
     }
 
+    @XmlElement
     public List<Subfields> getSubfield() {
         return subfield;
     }
