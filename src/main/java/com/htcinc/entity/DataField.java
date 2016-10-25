@@ -9,33 +9,19 @@ import java.util.List;
  */
 public class DataField {
 
-    @XmlAttribute
     private int tag;
 
-    @XmlAttribute
     private int ind1;
 
-    @XmlAttribute
     private int ind2;
 
-    @XmlElement
     private List<SubField> subFields;
-
-    public DataField() {
-    }
-
-    public DataField(int tag, int ind1, int ind2, List<SubField> subFields) {
-        this.tag = tag;
-        this.ind1 = ind1;
-        this.ind2 = ind2;
-        this.subFields = subFields;
-    }
 
     public void setTag(int tag) {
         this.tag = tag;
     }
 
-
+    @XmlAttribute(name="tag")
     public int getTag() {
         return tag;
     }
@@ -44,7 +30,7 @@ public class DataField {
         this.ind1 = ind1;
     }
 
-
+    @XmlAttribute(name="ind1")
     public int getInd1() {
         return ind1;
     }
@@ -53,6 +39,7 @@ public class DataField {
         this.ind2 = ind2;
     }
 
+    @XmlAttribute(name="ind2")
     public int getInd2() {
         return ind2;
     }
@@ -61,6 +48,7 @@ public class DataField {
         this.subFields = subFields;
     }
 
+    @XmlElement(name="subfield")
     public List<SubField> getSubFields() {
         return subFields;
     }

@@ -1,6 +1,7 @@
 package com.htcinc.entity;
 
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlValue;
 
 
 /**
@@ -8,21 +9,26 @@ import javax.xml.bind.annotation.XmlAttribute;
  */
 public class ControlField {
 
-    @XmlAttribute
     private int tag;
 
-    public ControlField() {
-    }
-
-    public ControlField(int tag) {
-        this.tag = tag;
-    }
+    private String description;
 
     public void setTag(int tag) {
         this.tag = tag;
     }
 
+    @XmlAttribute(name = "tag")
     public int getTag() {
         return tag;
+    }
+
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @XmlValue
+    public String getDescription() {
+        return description;
     }
 }

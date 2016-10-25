@@ -13,20 +13,13 @@ import java.util.List;
 @XmlRootElement
 public class Collection {
 
-    @XmlElement
     private List<Record> record;
-
-    public Collection() {
-    }
-
-    public Collection(List<Record> record) {
-        this.record = record;
-    }
 
     public void setRecords(List<Record> record) {
         this.record = record;
     }
 
+    @XmlElement(name="record")
     public List<Record> getRecords() {
         return record;
     }

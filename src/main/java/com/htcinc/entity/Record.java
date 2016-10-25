@@ -3,6 +3,7 @@ package com.htcinc.entity;
 
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
 /**
@@ -10,28 +11,17 @@ import java.util.List;
  */
 public class Record {
 
-    @XmlElement
     private String leader;
 
-    @XmlElement
     private List<ControlField> controlField;
 
-    @XmlElement
     private List<DataField> dataField;
-
-    public Record() {
-    }
-
-    public Record(String leader, List<ControlField> controlField, List<DataField> dataField) {
-        this.leader = leader;
-        this.controlField = controlField;
-        this.dataField = dataField;
-    }
 
     public void setLeader(String leader) {
         this.leader = leader;
     }
 
+    @XmlElement(name="leader")
     public String getLeader() {
         return leader;
     }
@@ -40,6 +30,7 @@ public class Record {
         this.controlField = controlField;
     }
 
+    @XmlElement(name="controlfield")
     public List<ControlField> getControlField() {
         return controlField;
     }
@@ -48,6 +39,7 @@ public class Record {
         this.dataField = dataField;
     }
 
+    @XmlElement(name="datafield")
     public List<DataField> getDataField() {
         return dataField;
     }
