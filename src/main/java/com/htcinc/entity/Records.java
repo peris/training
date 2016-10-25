@@ -16,7 +16,7 @@ public class Records {
         this.leader = leader;
     }
 
-    @XmlElement
+    @XmlElement(name="leader")
     public String getLeader() {
         return leader;
     }
@@ -25,7 +25,7 @@ public class Records {
         this.controlfields = controlfields;
     }
 
-    @XmlElement
+    @XmlElement(name="controlfield")
     public List<Controlfield> getControlfields() {
         return controlfields;
     }
@@ -34,7 +34,7 @@ public class Records {
         this.datafields = datafields;
     }
 
-    @XmlElement
+    @XmlElement(name="datafield")
     public List<Datafield> getDatafields() {
         return datafields;
     }

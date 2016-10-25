@@ -17,7 +17,7 @@ public class Collection {
         this.records = records;
     }
 
-    @XmlElement
+    @XmlElement(name="record")
     public List<Records> getRecords() {
         return records;
     }

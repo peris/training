@@ -21,7 +21,7 @@ public class UnmarshallerTest {
 
 
     @Test
-    public void checkUnmarshalling(){
+    public void checkUnmarshalling() throws Exception {
 
         URL resource = getClass().getResource("/com/htcinc/1MarcRecord.xml");
         System.out.println(resource);
@@ -35,7 +35,14 @@ public class UnmarshallerTest {
             assertNotNull(jaxbContext);
             Collection collection= (Collection) unmarshaller.unmarshal(file);
             List<Records> recordList = collection.getRecords();
-            for (Records records : recordList) System.out.println(records.getLeader());
+            for (Records records : recordList) {
+                System.out.println("Leader : "+records.getLeader());
+                for (Controlfield controlfield : records.getControlfields()){
+                    System.out.print("Tag : "+controlfield.getTag());
+                    System.out.println(" Value "+ controlfield.getDesc());
+                }
+
+            }
         }
 
          catch (JAXBException e) {

@@ -18,8 +18,16 @@ public class SubfieldsTest {
     @Test
     public void checkAttributeCode() throws Exception {
         Subfields subfields = new Subfields();
-        subfields.setCode('a');
-        Character subfieldsCode = subfields.getCode();
+        subfields.setCode("a");
+        String subfieldsCode = subfields.getCode();
         System.out.println(subfieldsCode);
+    }
+
+    @Test
+    public void checkDesc() throws Exception {
+        Subfields subfields = new Subfields();
+        subfields.setDesc("Value");
+        String subfieldsDesc = subfields.getDesc();
+        System.out.println(subfieldsDesc);
     }
 }

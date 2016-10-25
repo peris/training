@@ -22,4 +22,11 @@ public class ControlfieldTest {
         Integer controlfieldTag = controlfield.getTag();
         System.out.println(controlfieldTag);
     }
+    @Test
+    public void checkDesc() throws Exception {
+        Controlfield controlfield = new Controlfield();
+        controlfield.setDesc("Value");
+        String controlfieldDesc = controlfield.getDesc();
+        System.out.println(controlfieldDesc);
+    }
 }

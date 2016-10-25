@@ -8,14 +8,23 @@ import javax.xml.bind.annotation.XmlAttribute;
 public class Subfields {
 
 
-    private char code;
+    private String code;
+    private String desc;
 
-    public void setCode(char code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
-    @XmlAttribute
-    public char getCode() {
+    @XmlAttribute(name="code")
+    public String getCode() {
         return code;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 }

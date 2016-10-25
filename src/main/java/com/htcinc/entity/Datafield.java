@@ -24,7 +24,7 @@ public class Datafield {
         this.tag = tag;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="tag")
     public int getTag() {
         return tag;
     }
@@ -33,7 +33,7 @@ public class Datafield {
         this.ind1 = ind1;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="ind1")
     public int getInd1() {
         return ind1;
     }
@@ -42,7 +42,7 @@ public class Datafield {
         this.ind2 = ind2;
     }
 
-    @XmlAttribute
+    @XmlAttribute(name="ind2")
     public int getInd2() {
         return ind2;
     }
@@ -51,7 +51,7 @@ public class Datafield {
         this.subfield = subfield;
     }
 
-    @XmlElement
+    @XmlElement(name="subfield")
     public List<Subfields> getSubfield() {
         return subfield;
     }
