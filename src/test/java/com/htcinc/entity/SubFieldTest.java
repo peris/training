@@ -19,13 +19,4 @@ public class SubFieldTest {
         String subFieldCode = subField.getCode();
         assertNotNull(subFieldCode);
     }
-    @Test
-    public void checkDescription() throws Exception {
-        SubField subField = new SubField();
-        subField.setDescription("desc");
-        String description = subField.getDescription();
-        assertNotNull(description);
-
-    }
-
 }

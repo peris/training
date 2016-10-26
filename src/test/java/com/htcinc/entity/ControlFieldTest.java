@@ -20,15 +20,4 @@ public class ControlFieldTest {
         assertNotNull(controlTag);
 
     }
-
-    @Test
-    public void checkDescription() throws Exception {
-        ControlField controlField = new ControlField();
-        controlField.setDescription("desc");
-        String description = controlField.getDescription();
-        assertNotNull(description);
-
-    }
-
-
 }
