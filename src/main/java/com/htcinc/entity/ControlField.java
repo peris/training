@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.XmlValue;
 public class ControlField {
 
     private int tag;
-
     private String description;
 
     public void setTag(int tag) {
