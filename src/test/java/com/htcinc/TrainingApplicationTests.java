@@ -39,7 +39,21 @@ public class TrainingApplicationTests {
 
 
 
-	//	5.
+	//	5. To Save Bib Record
+	@Test
+	public void createTable(){
+
+	}
+
+	@Test
+	public void createPojoClass(){
+
+	}
+
+	@Test
+	public void createClassToPersistObjectInDB(){
+
+	}
 
 
 

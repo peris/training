@@ -19,7 +19,7 @@ public class ObjectsToXMlConverterTest {
 
     @Test
     public void checkMarshalling() throws Exception{
-        URL resource = getClass().getResource("/com/htcinc/MarshallMarcRecord.xml");
+        //URL resource = getClass().getResource("/com/htcinc/MarshallMarcRecord.xml");
         //File file = new File(resource.toURI());
         JAXBContext jaxbContext = JAXBContext.newInstance(Collection.class);
         assertNotNull(jaxbContext);
@@ -61,10 +61,8 @@ public class ObjectsToXMlConverterTest {
         collection.setRecords(records);
 
 
-        marshaller.marshal(collection,new File(resource.toURI()));
+        marshaller.marshal(collection,new File("MarshallMarcRecord.xml"));
         marshaller.marshal(collection, System.out);
-
-
 
     }
 }

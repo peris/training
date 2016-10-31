@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <record>
+        <controlfield tag="12">sample</controlfield>
+        <datafield ind1="11" ind2="12" tag="1">
+            <subfield code="abc"/>
+        </datafield>
+    </record>
+</collection>
