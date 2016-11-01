@@ -1,6 +1,7 @@
 package com.htcinc.entity;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ public class Bib {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name="bib_id" )
     private List<Holdings> holdings;
 
@@ -44,5 +45,29 @@ public class Bib {
 
     public String getContent() {
         return content;
+    }
+
+    @Override
+    public String toString() {
+        String result = String.format(
+                "Bib[id=%d, content='%s']",
+                id, content);
+        if (holdings != null) {
+            for(Holdings holding : holdings) {
+                result += String.format(
+                        "Holdings[id=%d, content='%s']",
+                        holding.getId(), holding.getContent());
+                if(holding.getItem() != null){
+                        List<Item> items = holding.getItem();
+                        for(Item item : items) {
+                            result += String.format(
+                                    "Item[id=%d, content='%s']%n",
+                                    item.getId(), item.getContent());
+                        }
+                }
+
+            }
+        }
+        return result;
     }
 }

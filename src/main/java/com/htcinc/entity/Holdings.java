@@ -16,11 +16,11 @@ public class Holdings {
     private Integer id;
 
 
-    @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="holding_id")
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    @JoinColumn(name = "holding_id")
     private List<Item> item;
 
-    @Column(name="content")
+    @Column(name = "content")
     private String content;
 
     public void setId(Integer id) {
@@ -46,4 +46,6 @@ public class Holdings {
     public String getContent() {
         return content;
     }
+
+
 }
