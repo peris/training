@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection>
+    <record>
+        <controlfield tag="1">TestControlField</controlfield>
+        <datafield ind1="1" ind2="2" tag="1">
+            <subfield code="a">TestCode</subfield>
+        </datafield>
+        <leader>TestLeader</leader>
+    </record>
+</collection>

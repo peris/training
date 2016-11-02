@@ -13,7 +13,11 @@ import static junit.framework.TestCase.assertNotNull;
 
 /**
  * Created by harikrishnanv on 25/10/16.
- */
+ *//*
+        URL resource = getClass().getResource("/com/htcinc/1MarcRecord.xml");
+        System.out.println(resource);
+
+        File file = new File(resource.toURI());*/
 public class MarshallerTest {
 
     @Test
@@ -59,18 +63,18 @@ public class MarshallerTest {
 
         //setters for collection
         collection.setRecords(recordsList);
-
+/*
         URL resource = getClass().getResource("/com/htcinc/1MarcRecord.xml");
         System.out.println(resource);
 
-        File file = new File(resource.toURI());
+        File file = new File(resource.toURI());*/
         JAXBContext jaxbContext = JAXBContext.newInstance(Collection.class);
         assertNotNull(jaxbContext);
         Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
         assertNotNull(jaxbMarshaller);
         jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        jaxbMarshaller.marshal(collection, file);
+        jaxbMarshaller.marshal(collection,new File("test.xml"));
         jaxbMarshaller.marshal(collection, System.out);
 
     }
